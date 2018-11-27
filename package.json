@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ryo-wtnb/circle/issues"
   },
-  "homepage": "https://github.com/ryo-wtnb/circle#readme"
+  "homepage": "https://github.com/ryo-wtnb/circle#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
