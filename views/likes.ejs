@@ -1,1 +1,16 @@
-<div>likes</div>
+<script>
+    $.ajax({
+        url: "http://tk2-215-17314.vs.sakura.ne.jp:3000/circles/ids.json",
+        type: "POST",
+        dataType: "json",
+        data: {ids: [1,2,3]}
+    }).then(function(data){
+        $.each(data, function(i){
+            $(".likes").append("id: "+ data[i].id + " 名前: " + data[i].name);
+        })
+    },function(){
+        alert("error");
+    }
+    );
+</script>
+<div class="likes"></div>
