@@ -6,7 +6,7 @@
         data: {ids: [1,2,3]}
     }).then(function(data){
         $.each(data, function(i){
-            $(".likes").append("id: "+ data[i].id + " 名前: " + data[i].name);
+            $(".likes").append("<p>id: " +data[i].id +"name: " + data[i].name +"days: " + data[i].days + "概要: "+ data[i].description + "fee: " + data[i].fee + "人数: " + data[i].members + "場所: "+ data[i].location + "リンク: " + data[i].link +"views: " +data[i].views +"頻度: " +data[i].frequency + "title: " + data[i].title + "url: " +data[i].url +"created at: " + data[i].created_at + "updated at: " +data[i].apdated_at);
         })
     },function(){
         alert("error");
