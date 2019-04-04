@@ -3,9 +3,25 @@
         <h1>
             サークルミッケ
         </h1>
-        <div class="text">
-            mainmainmain
-        </div>
+        
+            <script>
+                $.ajax({
+                    url:'http://tk2-215-17314.vs.sakura.ne.jp:3000/circles.json' ,
+                    type: 'GET',
+                    dataType: 'json' ,
+                }).then(
+                    function(data){
+                        $.each(data, function(i){
+                            $(".all").append('<div class="card"> <div class="name">' + data[i].name + '</div><div class="location">' + data[i].location +'</div><img src='+ data[i].url+ '></div></div>');
+                        });
+                    },
+                    function(){
+                        alert("error");
+                    }
+                );
+            </script>
+            <div class="all"></div>
+            
     </body>
 
 
